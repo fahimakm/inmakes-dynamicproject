@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container{padding:15px;max-width:300px;background-color:lightblue;}
+        input[type=text],input[type=password]{padding:12px;margin:5px;}
+        button[type=submit]{padding:15px 20px;width:100%;margin:5px;background-color:#154360;color}
+    </style>
+    <title>login page</title>
+</head>
+<body>
+<form action="login" method="post" >
+    {%csrf_token%}
+    <div class="container">
+        <h1 style="text-align:center">Login</h1>
+        <label><b>Username</b></label>
+        <input type="text" name="username" placeholder="username"><br>
+        <label><b>Password</b></label>
+        <input type="password" name="password" placeholder="Enter your password">
+        <label><b>Confirm password</b></label>
+        <input type="password" name="password1" placeholder="Confirm your password"><br>
+        <button type="submit">Login</button>
+    </div>
+</form>
+{%for msg in messages%}
+<h2>{{msg}}</h2>
+{% endfor %}
+
+</body>
+</html>
