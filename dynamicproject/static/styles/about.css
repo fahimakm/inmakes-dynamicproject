@@ -937,12 +937,12 @@ section
 {
 	width: 195px;
 	height: 195px;
-	border-radius: 50%;
+	border-radius: 30%;
 	overflow: hidden;
 }
 .team_image img
 {
-	max-width: 100%;
+    min-width: 100%;
 }
 .team_content
 {
